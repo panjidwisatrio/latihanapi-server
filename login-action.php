@@ -1,8 +1,11 @@
 <?php
 // membutuhkan pemanggilan akses koneksi (mysql)
 // (DISI)
+require 'koneksi.php';
+
 // fungsi untuk memulai session
 // (DISI)
+session_start();
  
 // variabel kosong untuk menyimpan pesan error
 $form_error = '';
@@ -15,7 +18,7 @@ if(isset($_POST['submit'])){
     $password = mysqli_real_escape_string($db, $_POST['psw']);
  
     // validasi login benar atau salah
-    if($username == 'NAMA' && $password == 'NIM'){
+    if($username == 'PANJI DWI SATRIO' && $password == '6706213011'){
  
         // jika login benar maka email akan disimpan ke session kemudian akan di redirect ke halaman profil
         $_SESSION['uname'] = $username;

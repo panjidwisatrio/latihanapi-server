@@ -2,9 +2,11 @@
 
 // membutuhkan pemanggilan akses koneksi (mysql)
 // (DISI)
+require 'koneksi.php';
 
 // menjalankan sessions
 // (DISI)
+session_start();
 
 // check apakah session email sudah ada atau belum.
 // jika belum maka akan diredirect ke halaman index (login)
@@ -95,10 +97,10 @@ if (empty($_SESSION['uname'])) {
                     </li>
                     <br>
                     <li class="nav-item">
-                        <p><strong>NAMA KALIAN</strong></p>
+                        <p><strong>PANJI DWI SATRIO</strong></p>
                     </li>
                     <li class="nav-item">
-                        <p>NIM KALIAN</p>
+                        <p>6706213011</p>
                     </li>
                     </li>
                 </ul>
@@ -212,7 +214,7 @@ if (empty($_SESSION['uname'])) {
                         while ($row = mysqli_fetch_assoc($query)) {
 
                             // gambar
-                            $img = "http://localhost/latihanapi-server/img/" . $row['gambar']; // LOCAL
+                            $img = "http://localhost:8080/latihanapi-server/img/" . $row['gambar']; // LOCAL
                             // HOSTING $img = "https://localhost/latihanapi-server/img/".$row['url_gambar'];
                         ?>
                         <!-- isi dari row yang dipanggil berdasarkan kolomnya -->
